@@ -1,0 +1,26 @@
+Summery
+<div>
+  <p>1</p>
+  <div *ngFor = "let group of summerizeData.deviceGroups">
+    <ul>
+      <li *ngFor = "let dev of group.devices">{{dev.name}}</li>
+    </ul>
+    <br>
+ </div>
+</div>
+<div>
+<p>2</p>
+  <ul>
+    <li *ngFor = "let protocol of summerizeData.protocols">{{protocol.name}}</li>
+  </ul>
+</div>
+<div>
+<span>3</span>
+<ul>
+    <li *ngFor = "let time of summerizeData.time">{{time.name}}</li>
+  </ul>
+</div>
+<div>
+  <button (click)="btnClearClicked()">Clear</button>
+  <button (click)="btnStartLearningClicked()">Start Learning</button>
+</div>

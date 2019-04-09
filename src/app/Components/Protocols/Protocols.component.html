@@ -1,0 +1,8 @@
+<h6>2 Select Protocols</h6>
+<div>
+    <app-checkbox-row *ngFor="let protocol of protocols" 
+      [item]="protocol"
+      (chkBoxStateChanged)="childChkStateChanged($event)">
+    </app-checkbox-row> 
+</div>
+

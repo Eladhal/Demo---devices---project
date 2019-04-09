@@ -1,0 +1,6 @@
+
+  <div class="form-group form-check">
+      <input type="checkbox" (change)="chkBoxclicked($event.target.checked)" id="{{item.name.split(' ').join('-')}}"
+       [checked]="itemChecked" class="form-check-input">
+      <label class="form-check-label" for="{{item.name.split(' ').join('-')}}">{{item.name}}</label>
+  </div>

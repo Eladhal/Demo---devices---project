@@ -1,0 +1,5 @@
+<div class="form-group form-check">
+    <input type="radio" (change)="chkBoxclicked($event.target.checked)"
+     [checked]="itemChecked" class="form-check-input" [name]="groupName">
+    <label class="form-check-label">{{item.name}}</label>
+</div>

@@ -1,0 +1,12 @@
+<h6>1 Select Blackboxes</h6>
+<div *ngIf='isLoaded; else loadingTemplate'>
+    <app-collapsable-checkboxes-group *ngFor="let group of deviceGropus" 
+    [devGroup]="group" (chkBoxStateChanged)="chkStateChanged($event)">
+    </app-collapsable-checkboxes-group>
+</div>
+
+<ng-template #loadingTemplate>
+  Loading..
+</ng-template>
+
+

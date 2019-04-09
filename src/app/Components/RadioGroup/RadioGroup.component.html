@@ -1,0 +1,10 @@
+<h6>3 Select Time period</h6>
+<div>
+    <app-radio-btn-row *ngFor="let time of timePeriod" 
+      [item]="time"
+      (chkBoxStateChanged)="childChkStateChanged($event)"
+      [groupName]="groupName"
+      >
+    </app-radio-btn-row> 
+</div>
+

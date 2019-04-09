@@ -1,0 +1,27 @@
+<div class="rowTitle">
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <button class="btn btn-light btn-sm mb-2" 
+              (click)="btnCollapseClicked()">
+              #
+      </button>
+    </div>
+    <div class ="col-auto">
+        <div class="form-check mb-2">
+          <input type="checkbox" (change)="titleChkBoxclicked($event.target.checked)" 
+                 [checked] = "titleChecked" class="form-check-input">
+        <label class="form-check-label">
+          {{devGroup.name}}
+        </label>
+        </div>
+    </div>
+ </div>
+</div>
+<div *ngIf="collapseState" class="collapseList">
+    <app-checkbox-row *ngFor="let dev of devGroup.devices" 
+                      [item]="dev"
+                      (chkBoxStateChanged)="childChkStateChanged($event)">
+  </app-checkbox-row>
+</div>
+
+
